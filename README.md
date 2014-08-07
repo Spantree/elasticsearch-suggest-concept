@@ -8,6 +8,10 @@ The top of the script contains some static variables.  Everything starting with 
 
 The script will proceed to create a ``temp`` index on that same instance and then a ``suggestions`` index, which is what you will use to query for suggestions.  *Note that it will load only **some** (1000) of the documents into the suggestion index*
 
+To launch the script, execute the Gradle task in the "transformation" directory:
+
+``gradle buildSuggest``
+
 ## Sample query and response
 
 Here is a sample query that will calculate a simple custom score based on the amount of times a suggestion occurs in the source index and how often a user utilizes the suggestion.  
